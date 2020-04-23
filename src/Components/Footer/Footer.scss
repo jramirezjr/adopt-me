@@ -1,0 +1,45 @@
+@import '../../variables';
+
+.footer {
+    background-color: $color-blue;
+    border-top: 5px solid $color-red;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-info{
+    text-align: left;
+}
+
+.footer .site{
+    padding-left: 0px;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-links li {
+    display: inline;
+    margin-left: 10px;
+}
+.footer-links ul{
+    list-style-type: none;
+}
+
+@media only screen and (max-width: 600px){
+    .footer{
+        margin-top:0;
+        flex-direction: column;
+    }
+
+    .footer-links{
+        visibility: hidden;
+    }
+}
+

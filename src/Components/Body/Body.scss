@@ -1,0 +1,178 @@
+@import '../../variables';
+
+
+.body {
+    display: grid;
+    grid-template-areas: ". volunteer testimonial testimonial ."
+                         ". programs programs dog .";
+    grid-template-columns: 10% 1fr 1fr 1fr 10%;
+    grid-template-rows: 400px 400px;
+    grid-gap: 20px 20px;
+
+}
+
+.body button {
+    border: 2px solid $color-blue;
+    color: $color-blue;
+    font-family: $font-family-primary;
+}
+
+.volunteers, .testimonial, .programs {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: left;
+    box-shadow: 5px 10px 15px rgba(0,0,0,.25);
+    font-family: $font-family-primary;
+    
+    
+}
+
+.volunteers {
+    grid-area: volunteer;
+    
+}
+
+.volunteers h3 {
+    background-color: $color-blue;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 10px;
+    
+}
+
+.description {
+   color: $color-gray;
+   padding: 20px;
+}
+
+.testimonial {
+    grid-area: testimonial;   
+    
+}
+
+.testimonial h3 {
+    background-color: $color-red;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 10px;
+}
+
+.testimonial iframe {
+    height: 100%;
+    min-width: 200px;
+    width: 100%;
+}
+
+.programs {
+    grid-area: programs;
+    color: $color-gray;
+    box-shadow: none;    
+}
+
+.programs ul{
+    list-style-type: none;
+    padding-left: 0px;
+    
+}
+
+.programs li {
+    display: inline;
+    padding-right: 5%;
+    font-family: $font-family-primary;
+    font-weight: bold;
+    
+   
+}
+
+.programs a{
+    text-decoration: none;
+}
+
+.post-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.post {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    margin-bottom: 20px;
+    align-items: flex-end;
+}
+
+.post h5, .post button{
+    color: $color-red;
+}
+
+.post button{
+    border: 2px solid $color-red;
+}
+
+
+
+.post img{
+    width: 20%;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.text-box {
+    margin-left: 5%;
+}
+
+.dogs {
+    grid-area: dog;
+    display: flex;
+    
+   
+}
+
+.dogs img {
+    object-fit: cover;
+    max-height: 400px;
+    width: 100%;
+    
+}
+
+@media only screen and (max-width: 800px) {
+    .body{
+    display: grid;
+    grid-template-areas: "volunteer"
+                          "testimonial"
+                          "programs"
+                          "dog";
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+   
+    }
+
+    .volunteers{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .description{
+        padding: 5px;
+    }
+
+    .post{
+        align-items: flex-end;
+    }
+
+    .post img{
+        width: 50%;
+        
+    }
+
+    .text-box {
+        font-size: 12px;;
+    }
+
+    .programs ul{
+    text-align: center;
+    }
+ }
